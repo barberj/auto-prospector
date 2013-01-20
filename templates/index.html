@@ -1,0 +1,22 @@
+<html ng-app="LinkApp">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script src="{{url_for('static', filename='li.js')}}"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body ng-controller="GroupSearch">
+    <form name="liForm">
+      <input type="text" name="input" ng-change="query(input, results)" ng-model="input" required>
+      <select ng-model="search">
+        <option ng-repeat="search in searches" value="[[search.toLowerCase()]]" ng-selected="search=='All'">
+         [[search]] [[results[search.toLowerCase()] != undefined && results[search.toLowerCase()].length != 0 && '('+results[search.toLowerCase()].length+')' || '']]
+        </option>
+      </select>
+    </form>
+    <div class="result" ng-repeat="row in results[search]">
+      <img src="[[row.image]]">
+      <a ng-href="[[row.url]]" target="_blank">[[row.name]]</a>
+      <a class="button" ng-href='https://www.google.com/search?q="[[row.name]]"+site:linkedin.com/in/+OR+site:linkedin.com/pub/+-site:linkedin.com/pub/dir/' target="_blank">Google People</a>
+    </div>
+  </body>
+</html>

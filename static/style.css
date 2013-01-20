@@ -1,0 +1,31 @@
+
+.result {
+    height: 42px;
+    line-height: 40px;
+    padding-left: 1px;
+}
+
+.result img {
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 1.2em;
+}
+
+.result:nth-child(2n+1) {
+  background: #F3F3F3;
+}
+
+.button {
+  font:-webkit-small-control;
+  -webkit-appearance: button;
+  text-decoration: none;
+  padding: 2px;
+  color: black;
+
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  box-shadow: 0px 0px 4px 0px #ffffff;
+  border: 1px solid;
+  background-color: buttonface;
+}
