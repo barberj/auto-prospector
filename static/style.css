@@ -1,14 +1,23 @@
+a {
+  color: #005dab;
+  text-decoration: none;
+}
+.title {
+  color: #005dab;
+  font-size: 26px;
+  line-height: 30px;
+}
 
 .result {
-    height: 42px;
-    line-height: 40px;
-    padding-left: 1px;
+  height: 42px;
+  line-height: 40px;
+  padding-left: 1px;
 }
 
 .result img {
-    width: 40px;
-    vertical-align: middle;
-    margin-right: 1.2em;
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 1.2em;
 }
 
 .result:nth-child(2n+1) {
@@ -18,7 +27,6 @@
 .button {
   font:-webkit-small-control;
   -webkit-appearance: button;
-  text-decoration: none;
   padding: 2px;
   color: black;
 

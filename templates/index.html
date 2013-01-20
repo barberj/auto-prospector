@@ -5,6 +5,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='style.css')}}" />
   </head>
   <body ng-controller="GroupSearch">
+    <h2 class="title"><a href="http://salesloft.com/auto-prospecting-tool/" title="Auto-Prospecting Tool Feeder">Auto-Prospecting Tool Feeder</a></h2>
+    <p>Start typing your search criteria to automatically find the LinkedIn Company or Group.</p>
+    <p>Once you locate the correct reference, click the <i>'Google People'</i> button to feed the proper reference into Google for
+      SalesLoft's Auto-Prospecting Tool featured at B2BCamp Atlanta 2013.</p>
     <form name="liForm">
       <input type="text" name="input" ng-change="query(input, results)" ng-model="input" required>
       <select ng-model="search">
