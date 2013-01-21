@@ -2,6 +2,17 @@ a {
   color: #005dab;
   text-decoration: none;
 }
+
+.error {
+  border: 1px solid #E3E3E3;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ffebeb;
+  border-color: #c99;
+  color: #a00;
+}
+
 .title {
   color: #005dab;
   font-size: 26px;

@@ -9,6 +9,12 @@
     <p>Start typing your search criteria to automatically find the LinkedIn Company or Group.</p>
     <p>Once you locate the correct reference, click the <i>'Google People'</i> button to feed the proper reference into Google for
       SalesLoft's Auto-Prospecting Tool featured at B2BCamp Atlanta 2013.</p>
+    <p class="error" ng-show="results.error">
+      An error has occurred while trying to search using your criteria. It has been noted that certain LinkedIn
+      accounts prevent this page from working while they are logged in. If you are logged in to LinkedIn
+      please log out and try again. We are working to resolve this matter.<br /><br />
+      Thank You
+    </p>
     <form name="liForm">
       <input type="text" name="input" ng-change="query(input, results)" ng-model="input" required>
       <select ng-model="search">
