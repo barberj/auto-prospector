@@ -20,7 +20,7 @@
     <div class="result" ng-repeat="row in results[search]">
       <img src="[[row.image]]">
       <a ng-href="[[row.url]]" target="_blank">[[row.name]]</a>
-      <a class="button" ng-href='https://www.google.com/search?q="[[row.name]]"+site:linkedin.com/in/+OR+site:linkedin.com/pub/+-site:linkedin.com/pub/dir/' target="_blank">Google People</a>
+      <a class="button" ng-href="[[row.gurl]]" target="_blank">Google People</a>
     </div>
   </body>
 </html>

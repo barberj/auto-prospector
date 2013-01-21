@@ -17,7 +17,6 @@ app.controller('GroupSearch', function GroupSearch($scope, $http) {
     }
 
     $scope.query = function(param, results) {
-        console.log('input is ' + param);
         angular.forEach(results, function(value, key){
             delete results[key];
         });
@@ -26,6 +25,7 @@ app.controller('GroupSearch', function GroupSearch($scope, $http) {
             return;
         }
 
+        param = encodeURIComponent(param);
         var url = 'http://www.linkedin.com/ta/federator?query='+
           param+'&types=mynetwork,company,group,sitefeature,skill';
 
@@ -39,6 +39,7 @@ app.controller('GroupSearch', function GroupSearch($scope, $http) {
                   r.id = v.id;
                   r.name = v.displayName;
                   r.image = v.imageUrl;
+                  r.gurl = 'https://www.google.com/search?q="'+param+'"+site:linkedin.com/in/+OR+site:linkedin.com/pub/+-site:linkedin.com/pub/dir/';
                   results[key].push(r);
                   results['all'].push(r);
                 });
